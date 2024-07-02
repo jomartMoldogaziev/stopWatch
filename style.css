@@ -142,122 +142,46 @@ button {
     box-shadow: 0px 75px 150px 40px #026e10;
     background-color: white;
    }
-   @media (max-width:375px) {
-    .wrapper{
-        position: relative;
+    @media (max-width: 768px) {
+    .wrapper {
         top: 35%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        /* display: flex;
-        justify-content: center; */
     }
+
     .wrapper p {
-        position: relative;
-        display: inline-block;
-        color: rgb(255, 255, 255);
         font-size: 40px;
-        font-weight: 900;
-        border: none;
-        margin-bottom: 150px;
     }
-    
-    .wrapper p::before {
-        content: '';
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        background-color: rgb(10, 10, 194);
-        z-index: -1;
-        border-radius: 50%;
-        border: 6px solid;
-        left: -35px;
-        top: -80px;
-        animation-name: joma;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-    }
-    button {
-        --glow-color: rgb(255, 255, 255);
-        --glow-spread-color: rgba(139, 201, 236, 0.781);
-        --enhanced-glow-color: rgb(252, 251, 249);
-        --btn-color: rgb(12, 8, 218);
-        border: 0.15em solid var(--glow-color);
-        padding: 0.5em 1.5em;
-        color: var(--glow-color);
-        font-size: 13px;
-        font-weight: bold;
-        background-color: var(--btn-color);
-        border-radius: 1em;
-        outline: none;
-        font-family: "Russo One", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        box-shadow: 0 0 10em .25em var(--glow-color),
-               0 0 .1em .1em var(--glow-spread-color),
-               inset 0 0 .5em .1em var(--glow-color);
-        text-shadow: 0 0 .5em var(--glow-color);
-        position: relative;
-        transition: all 0.3s;
-        margin: 5px;
-       }
-       
-       button::after {
-        pointer-events: none;
-        content: "";
-        position: absolute;
-        top: 120%;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-color: var(--glow-spread-color);
-        filter: blur(1.3em);
-        opacity: .7;
-        transform: perspective(1.2em) rotateX(35deg) scale(1, .5);
-       }
-       
-       button:hover {
-        color: var(--btn-color);
-        border: 2px solid rgb(0, 0, 255);
-        background-color: var(--glow-color);
-        cursor: pointer;
-        box-shadow: 0 0 1em .1em var(--glow-color),
-               0 0 2em 1em var(--glow-spread-color),
-               inset 0 0 .1em .1em var(--glow-color);
-       }
-       
-       button:active {
-        box-shadow: 0 0 0.8em .1em var(--glow-color),
-               0 0 2.5em 2em var(--glow-spread-color),
-               inset 0 0 .75em .25em var(--glow-color);
-       }
-    
-       button:hover,
-       button:focus{
-        border-color: rgb(56, 253, 7);
-        color: rgb(7, 3, 252);
-        box-shadow: 0px 75px 150px 40px #026e10;
-        background-color: white;
-       }
-       #laps {
-        list-style-type: none;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        max-width: 350px;
-        margin: 0 auto; 
-        margin-top:170px;
-    }
-    
+
     #laps li {
         width: 250px;
-        color: aliceblue;
-        border-radius: 10px;
         font-size: 20px;
-        margin: 5px 0;
-        padding: 5px;
-        background-color: #1638f7;
-        border: 1px solid #ccc;
-        text-align: center; 
     }
-   }
+
+    button {
+        font-size: 18px;
+        padding: 0.4em 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        top: 30%;
+      
+    }
+
+    .wrapper p {
+        font-size: 50px;
+    }
+    #laps {
+        margin-top: 150px;
+    }
+
+    #laps li {
+        width: 200px;
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 0.3em 1em;
+    }
+}
