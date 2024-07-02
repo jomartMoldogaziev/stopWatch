@@ -184,4 +184,19 @@ button {
         font-size: 16px;
         padding: 0.3em 1em;
     }
+        .wrapper p::before {
+        content: '';
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        background: linear-gradient(45deg, #0602f2 0%, #0d0d0d 100%);    z-index: -1;
+        border-radius: 50%;
+        border: 6px solid;
+        left: -35px;
+        top: -100px;
+        animation-name: joma;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+    }
+    
 }
